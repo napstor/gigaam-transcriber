@@ -30,7 +30,7 @@ def handler(job):
 
     try:
         wav_path = to_wav(tmp_path)
-        transcription = model.transcribe(wav_path)
+        transcription = model.transcribe_longform(wav_path)
         os.unlink(wav_path)
     finally:
         os.unlink(tmp_path)
